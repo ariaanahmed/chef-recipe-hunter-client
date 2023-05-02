@@ -10,27 +10,33 @@ import Home from './components/Home/Home.jsx';
 import Login from './components/login/Login.jsx';
 import Blogs from './components/blogs/Blogs.jsx'
 import Registration from './components/registration/Registration.jsx';
+import Chefs from './components/chefs/Chefs.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: '/',
-        element: <Home/>
+        element: <Home />,
+        loader: ({ params }) => fetch(`http://localhost:5000/chefs`)
+      },
+      {
+        path: '/chefs',
+        element: <Chefs/>,
       },
       {
         path: '/blogs',
-        element: <Blogs/>
+        element: <Blogs />
       },
       {
         path: '/login',
-        element: <Login/>
+        element: <Login />
       },
       {
         path: '/registration',
-        element: <Registration/>
+        element: <Registration />
       }
     ]
   }

@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Container fluid>
-            <Navbar bg="light" expand="lg">
+        <Container>
+            <Navbar expand="lg" className='border-bottom mb-lg-5'>
                 <Navbar.Brand>Assignment 10</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
