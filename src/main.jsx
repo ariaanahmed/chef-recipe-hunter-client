@@ -13,6 +13,7 @@ import Registration from './components/registration/Registration.jsx';
 import Chefs from './components/chefs/Chefs.jsx';
 import ChefRecipes from './components/chefRechipes/ChefRecipes.jsx';
 import About from './components/about/About.jsx';
+import NotFound from './components/404notFound/NotFound.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: '/registration',
         element: <Registration />
+      },
+      {
+        path: '*',
+        element: <NotFound/>
       }
     ]
   }
