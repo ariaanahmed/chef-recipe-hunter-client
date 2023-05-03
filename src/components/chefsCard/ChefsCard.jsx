@@ -4,7 +4,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const ChefsCard = ({ chef }) => {
-    const { chefsImg, name, likes, experience, totalRecipes } = chef
+    const { chefsImg, name, likes, experience, totalRecipes, _id } = chef
     return (
         <div className='d-lg-flex gap-1 border p-2 rounded'>
             <div className='flex-grow-1'>
@@ -15,7 +15,7 @@ const ChefsCard = ({ chef }) => {
                 <p><small>Experi: {experience}</small></p>
                 <h6 className='text-secondary'>Likes: {likes}</h6>
                 <p>Recipes: {totalRecipes}</p>
-                <Link to="/ChefRecipes">
+                <Link to={`/ChefRecipes/:${_id}`}>
                     <Button>View</Button>
                 </Link>
             </div>
