@@ -8,9 +8,9 @@ import img3 from '../../assets/imgs/Shake.jpg';
 
 const HotRecipes = () => {
     return (
-        <Container>
-            <h3 className='text-center mb-5'>Hottest Recipes</h3>
-            <div className='d-lg-flex text-center gap-5 mb-5'>
+        <Container className='bg-light'>
+            <h3 className='text-center pb-5'>Hottest Recipes</h3>
+            <div className='d-lg-flex text-center gap-5 pb-5'>
                 <Card>
                     <Card.Img variant="top" className='pb-5 p-2' src={img1} />
                     <Card.Body>

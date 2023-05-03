@@ -9,8 +9,8 @@ import img5 from '../../assets/imgs/ig-5.png'
 
 const FamousFoods = () => {
     return (
-        <Container className='mb-5'>
-            <h3 className='text-center my-5'>Famous Foods</h3>
+        <Container className='pb-5 bg-light'>
+            <h3 className='text-center py-5'>Famous Foods</h3>
             <Marquee pauseOnHover={true}>
                 <Card className='p-2' style={{ width: '18rem' }}>
                     <Card.Img variant="top" src={img1} />

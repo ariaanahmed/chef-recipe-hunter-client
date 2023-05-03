@@ -8,7 +8,7 @@ const ChefRecipes = () => {
     const recipes = useLoaderData()
 
     return (
-        <Container>
+        <Container className='bg-light'>
             <h3 className='text-center text-capitalize pb-3'>chef recipes</h3>
             
             <div className='singleCardsCotnainer'>

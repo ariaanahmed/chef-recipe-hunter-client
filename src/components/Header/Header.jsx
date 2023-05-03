@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Container>
-            <Navbar expand="lg" className='border-bottom mb-lg-5'>
+        <Container fluid>
+            <Navbar expand="lg" className='border-bottom bg-light px-3'>
                 <Navbar.Brand>Assignment 10</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

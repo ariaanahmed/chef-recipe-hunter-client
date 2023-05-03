@@ -11,8 +11,8 @@ const Chefs = () => {
         .then((res) => res.json()).then((data)=> setChefs(data))
     }, [])
     return (
-        <Container>
-            <h3 className='text-center mb-lg-5 names-j'>Our Master Chefs</h3>
+        <Container className='bg-light'>
+            <h3 className='text-center mb-lg-5 names-j bg-light'>Our Master Chefs</h3>
 
             <Row>
                 <Col className='myCol'>

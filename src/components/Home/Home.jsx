@@ -6,7 +6,7 @@ import HotRecipes from '../hotrecipes/HotRecipes';
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Banner/>
             <Chefs/>
             <FamousFoods/>

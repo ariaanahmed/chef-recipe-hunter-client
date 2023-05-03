@@ -4,7 +4,7 @@ import { Container } from 'react-bootstrap';
 const About = () => {
     return (
         <Container>
-            <div >
+            <div className='bg-light'>
                 <h1> Welcome to our website!</h1>
 
                 <p className='fw-semibold'>
