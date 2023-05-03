@@ -9,7 +9,7 @@ const ChefRecipes = () => {
     console.log(signleRecipes)
     return (
         <Container>
-            <h3>chef recipes</h3>
+            <h3 className='text-center text-capitalize pb-3'>chef recipes</h3>
             <div className='singleCardsCotnainer'>
                 {
                     signleRecipes.map((recipe) => <Recipes

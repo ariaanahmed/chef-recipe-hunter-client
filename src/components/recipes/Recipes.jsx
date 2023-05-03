@@ -3,17 +3,20 @@ import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
-import { IconName } from "react-icons/fa";
+import { FaRegBookmark } from "react-icons/fa";
+
+import { toast } from 'react-toastify';
 
 const Recipes = ({ recipe }) => {
 
     const recipesss = recipe.numbersOfrecipes;
 
-    const { name } = recipe;
+    const notify = () => toast("Item Saved!")
 
     console.log(recipesss.recipe_1)
+
     return (
-        <Container>
+        <Container className='mb-5'>
             <Row>
                 <Col>
                     <Card className='p-2' style={{ width: '100%' }}>
@@ -24,11 +27,11 @@ const Recipes = ({ recipe }) => {
                                 <span className='fw-bold'>Cooking Method:</span> {recipesss.recipe_1.recipe_description} <br />
                                 <p><span className='fw-semibold'>Ingredients: </span>{recipesss.recipe_1.ingredients}</p>
 
-                                <span className='d-flex gap-2'>Rating: 
-                                    <Rating style={{ maxWidth: '85px' }} value={recipesss.recipe_1.star_rating} readOnly /> 
-                                    {recipesss.recipe_1.star_rating}
-                                    </span>
-                                    <Button>S</Button>
+                                <span className='d-lg-flex justify-content-between align-items-center'>Rating:
+                                    <Rating style={{ maxWidth: '85px' }} value={recipesss.recipe_1.star_rating} readOnly />
+                                    <span>{recipesss.recipe_1.star_rating}</span>
+                                    <Button onClick={notify}> <FaRegBookmark /> </Button>
+                                </span>
                             </Card.Text>
                         </Card.Body>
                     </Card>
