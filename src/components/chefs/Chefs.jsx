@@ -12,7 +12,7 @@ const Chefs = () => {
     }, [])
     return (
         <Container>
-            <h3 className='text-center mb-lg-5 names-j'>Our Master Chefs: {chefs.length}</h3>
+            <h3 className='text-center mb-lg-5 names-j'>Our Master Chefs</h3>
 
             <Row>
                 <Col className='myCol'>
