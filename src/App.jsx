@@ -8,11 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-      <Outlet/>
-      <Footer/>
-      <ToastContainer/>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <Header />
+      <Outlet />
+      <Footer />
+      <ToastContainer />
     </div>
   );
 };
