@@ -12,6 +12,7 @@ const Header = () => {
                     <Nav className="ms-auto gap-lg-5 gap-3 d-lg-flex align-items-lg-center">
                         <Link className='text-decoration-none fw-bold' to='/'>Home</Link>
                         <Link className='text-decoration-none fw-bold' to='/blogs'>Blogs</Link>
+                        <Link className='text-decoration-none fw-bold' to='/about'>About</Link>
                         <Link className='text-decoration-none' to='/login'>
                             <Button className='fw-bold'>Login</Button>
                         </Link>
