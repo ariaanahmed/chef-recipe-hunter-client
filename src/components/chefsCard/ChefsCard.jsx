@@ -1,6 +1,7 @@
 import { keys } from 'localforage';
 import React from 'react';
 import { Button, Card, Col, Row } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const ChefsCard = ({ chef }) => {
     const { chefsImg, name, likes, experience, totalRecipes } = chef
@@ -14,7 +15,9 @@ const ChefsCard = ({ chef }) => {
                 <p><small>Experi: {experience}</small></p>
                 <h6 className='text-secondary'>Likes: {likes}</h6>
                 <p>Recipes: {totalRecipes}</p>
-                <Button>View</Button>
+                <Link to="/ChefRecipes">
+                    <Button>View</Button>
+                </Link>
             </div>
         </div>
     );
