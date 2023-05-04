@@ -2,11 +2,15 @@ import React, { useContext, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { GoogleAuthProvider, signInWithPopup, getAuth, GithubAuthProvider } from 'firebase/auth';
+import app from '../../firebase/firebase.config';
+const auth = getAuth(app)
 
 const Login = () => {
 
     const [message, setMessage] = useState('')
-    const {signIn} = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
 
     const hanldeLogIn = (event) => {
         event.preventDefault();
@@ -26,6 +30,27 @@ const Login = () => {
 
     }
 
+const provider = new GoogleAuthProvider()
+const githubProvider = new GithubAuthProvider()
+const signInGoogle = () => {
+
+    signInWithPopup(auth, provider).then((result) => {
+        const loggedUserPopPup = result.user;
+        console.log(loggedUserPopPup)
+    }).catch((error) => {
+        setMessage(error.message)
+    })
+}
+
+const signInGitHub = () => {
+    signInWithPopup(auth, githubProvider).then((result) => {
+        const loggedUser = result.user;
+        console.log(loggedUser)
+    }).catch((error) => {
+        console.log(error.message)
+    })
+}
+
     return (
         <div>
             <Form onSubmit={hanldeLogIn} className='w-25 mx-auto border p-3 mt-5 rounded'>
@@ -41,6 +66,11 @@ const Login = () => {
                 <Button variant="primary w-100" type="submit">Login</Button>
                 <small>New to site? <Link to="/registration">Register</Link></small>
                 <p className='fw-semibold text-secondary'>{message}</p>
+
+                <div className='d-flex gap-2'>
+                    <Button onClick={signInGoogle} variant='outline border border-1 border-dark'><FaGoogle /> Google SignIn </Button>
+                    <Button onClick={signInGitHub} variant='outline border border-1 border-dark'><FaGithub /> GitHub SignIn </Button>
+                </div>
             </Form>
         </div>
     );
