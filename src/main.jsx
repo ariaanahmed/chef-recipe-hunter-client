@@ -14,6 +14,7 @@ import Chefs from './components/chefs/Chefs.jsx';
 import ChefRecipes from './components/chefRechipes/ChefRecipes.jsx';
 import About from './components/about/About.jsx';
 import NotFound from './components/404notFound/NotFound.jsx';
+import PrivateRoute from './components/privateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/ChefRecipes/:id',
-        element: <ChefRecipes/>,
+        element: <PrivateRoute> <ChefRecipes/> </PrivateRoute>,
         loader: ({params}) => fetch('http://localhost:5000/chefs/')
       },
       {
