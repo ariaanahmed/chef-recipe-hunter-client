@@ -1,5 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import BannerImg from '../../assets/imgs/banner.jpg'
 
 const Banner = () => {
     return (
@@ -11,7 +12,7 @@ const Banner = () => {
                 </Col>
                 <Col lg={6}>
                     <div className='border-left'>
-                        <img className='img-fluid rounded' src="/src/assets/banner.jpg" alt="banner-img" />
+                        <img className='img-fluid rounded' src={BannerImg} alt="banner-img" />
                     </div>
                 </Col>
             </Row>
