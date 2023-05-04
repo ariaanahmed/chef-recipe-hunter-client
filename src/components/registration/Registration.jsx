@@ -64,7 +64,7 @@ const Registration = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPhoto">
-                <Form.Control type="text" name='photoURL' placeholder="Photo URL" />
+                <Form.Control type="text" name='photoURL' required placeholder="Photo URL" />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
