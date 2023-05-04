@@ -12,3 +12,7 @@
 12. home page is fully respossive
 13. .env.local file created and firebase key hidden
 14. active route added
+
+server site: https://assignment-10-master-chefs-ariaanahmed.vercel.app
+
+client: https://assignment10-fb91b.web.app/
