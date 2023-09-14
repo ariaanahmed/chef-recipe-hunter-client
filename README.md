@@ -1,3 +1,5 @@
+Live site: https://assignment10-fb91b.web.app/
+![img](https://github.com/ariaanahmed/chef-recipe-hunter-client/assets/121677432/e521dfa4-e665-4631-b777-fce5eb80e47a)
 1. Navbar created. Login with google and github added.
 2. react icons added.
 3. API added
@@ -13,6 +15,5 @@
 13. .env.local file created and firebase key hidden
 14. active route added
 
-server site: https://assignment-10-master-chefs-ariaanahmed.vercel.app
-
-client: https://assignment10-fb91b.web.app/
+client site repo: https://github.com/ariaanahmed/chef-recipe-hunter-client
+server site: https://github.com/ariaanahmed/chef-recipe-hunter-server
